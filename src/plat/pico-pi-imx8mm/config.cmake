@@ -7,7 +7,7 @@
 
 cmake_minimum_required(VERSION 3.7.2)
 
-declare_platform(pico-pi-imx8mm KernelPlatformPico-pi-imx8mm PLAT_PICO_PI_IMX8MM KernelArchARM)
+declare_platform(pico-pi-imx8mm KernelPlatformPico-pi-imx8mm PLAT_PICO_PI_IMX8MM KernelSel4ArchAarch64)
 
 if(KernelPlatformPico-pi-imx8mm)
     declare_seL4_arch(aarch64)

@@ -158,6 +158,11 @@
 		};
 	};
 
+ 	memory@40000000 {
+		device_type = "memory";
+		reg = <0x0 0x40000000 0 0x80000000>;
+	};
+
 	reserved-memory {
 		#address-cells = <0x02>;
 		#size-cells = <0x02>;
