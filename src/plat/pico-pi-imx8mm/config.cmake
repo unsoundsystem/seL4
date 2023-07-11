@@ -17,6 +17,7 @@ if(KernelPlatformPico-pi-imx8mm)
     config_set(KernelARMPlatform ARM_PLAT ${KernelPlatform})
     set(KernelArmMach "imx" CACHE INTERNAL "")
     list(APPEND KernelDTSList "tools/dts/${KernelPlatform}.dts")
+    list(APPEND KernelDTSList "src/plat/pico-pi-imx8mm/overlay-${KernelPlatform}.dts")
     declare_default_headers(
         TIMER_FREQUENCY 8000000
         MAX_IRQ 160
