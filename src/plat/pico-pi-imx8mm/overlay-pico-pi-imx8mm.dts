@@ -1,0 +1,30 @@
+/ {
+    chosen {
+        seL4,elfloader-devices =
+            "serial1",
+            &{/psci};
+
+        seL4,kernel-devices =
+            "serial1",
+            &{/soc@0/interrupt-controller@38800000},
+            &{/timer};
+    };
+
+    gpt@302d0000 {
+        compatible = "fsl,imx8mm-gpt";
+        reg = <0x00 0x302d0000 0x00 0x10000>;
+        interrupts = <0x00 0x37 0x04>;
+        clocks = <0x02 0xc5 0x02 0xc5 0x02 0xf9>;
+        clock-names = "ipg\0per\0osc_per";
+        status = "disabled";
+    };
+
+    gpt@302e0000 {
+        compatible = "fsl,imx8mm-gpt";
+        reg = <0x00 0x302e0000 0x00 0x10000>;
+        interrupts = <0x00 0x36 0x04>;
+        clocks = <0x04 0xc5 0x04 0xc5 0x04 0xf9>;
+        clock-names = "ipg\0per\0osc_per";
+        status = "disabled";
+    };
+};
